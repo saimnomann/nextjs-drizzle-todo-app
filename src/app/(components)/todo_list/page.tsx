@@ -1,6 +1,6 @@
 import {TodoSelect} from "@/lib/drizzle";
-import DeleteTask from "../deleteTask/page";
-import EditTask from "../editTask/page";
+import DeleteTask from "../deleteTask";
+import EditTask from "../editTask";
 export default async function TodoTask(){
     let data:TodoSelect[]=[]
    try{ const res=await fetch("http://localhost:3000/api/todo",{
