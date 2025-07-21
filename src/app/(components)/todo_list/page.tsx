@@ -3,7 +3,7 @@ import DeleteTask from "../deleteTask";
 import EditTask from "../editTask";
 export default async function TodoTask(){
     let data:TodoSelect[]=[]
-   try{ const res=await fetch("http://localhost:3000/api/todo",{
+   try{ const res=await fetch("https://nextjs-drizzle-todo-app.vercel.app/api/todo",{
         cache:"no-store"
     }
 )
