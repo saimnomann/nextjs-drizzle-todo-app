@@ -46,7 +46,7 @@ return(
         value={Task.task}
         onChange={(e)=>{setTask({task:e.target.value})}} required/>
         <button className="bg-gradient-to-r from-[#DD2476] to-[#FF512F] rounded-full hover:cursor-pointer hover:scale-105
-         w-12  h-12"type="submit">{Loading?(<div className="bg-transparent border-t-transparent mx-3 border-2 border-white w-6 h-6 rounded-full animate-spin"></div>):(<Image src={"/vector.png"} alt="Not Found" height={23} width={23} className="mx-3.5"/>)}
+         w-12  h-12"type="submit">{Loading?(<div className="bg-transparent border-t-transparent mx-3 border-2 border-white w-6 h-6 rounded-full animate-spin"></div>):(<Image src={"/Vector.png"} alt="Not Found" height={23} width={23} className="mx-3.5"/>)}
 
         </button>
     </form>
