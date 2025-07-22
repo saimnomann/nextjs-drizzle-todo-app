@@ -1,15 +1,12 @@
 import { TodoSelect } from "@/lib/drizzle";
 import DeleteTask from "../deleteTask";
-import { headers } from "next/headers";
+
 import EditTask from "../editTask";
 export default async function TodoTask() {
+    const url=process.env.NEXT_LOCAL_BASE_URL||process.env.NEXT_PUBLIC_BASE_URL
     let data: TodoSelect[] = []
     try {
-        const headersList = headers();
-        const protocol = (await headersList).get("x-forwarded-proto") || "http";
-        const host = (await headersList).get("host");
-        const baseUrl = `${protocol}://${host}`;
-        const res = await fetch(`${baseUrl}/api/todo`, {
+        const res = await fetch(`${url}/api/todo`, {
             method: "GET",
             cache: "no-store"
         }
@@ -20,6 +17,7 @@ export default async function TodoTask() {
         }
 
          data = await res.json()
+
     
         if (data.length === 0) {
             return (<div className="text-2xl text-gray-800 font-bold py-4 text-center">
