@@ -3,7 +3,7 @@ import DeleteTask from "../deleteTask";
 
 import EditTask from "../editTask";
 export default async function TodoTask() {
-    const url=process.env.NEXT_LOCAL_BASE_URL||process.env.NEXT_PUBLIC_BASE_URL
+    const url=process.env.NEXT_PUBLIC_BASE_URL||process.env.NEXT_LOCAL_BASE_URL
     let data: TodoSelect[] = []
     try {
         const res = await fetch(`${url}/api/todo`, {
